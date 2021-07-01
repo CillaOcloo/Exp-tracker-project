@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { getAllUsers } from '../actions/trackerActions';
 import Tracker from './Tracker';
+
 
 function TrackerList(props) {
     return (
@@ -21,4 +23,7 @@ function mapStateToProps(state) {
         users:state.users
     }
 }
-export default connect(mapStateToProps,{}) (TrackerList);
+const mapDispatchToProps ={
+    getAllUsers,
+}
+export default connect(mapStateToProps,mapDispatchToProps) (TrackerList);
