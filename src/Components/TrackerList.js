@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import { getAllUsers } from '../actions/trackerActions';
 import Tracker from './Tracker';
 
 
 function TrackerList(props) {
+    useEffect(() =>{
+        props.getAllUsers();
+    }, [])
+
+
+
+
     return (
         <div>
             {props.users.map((user) =>

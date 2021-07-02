@@ -2,7 +2,7 @@ import React from 'react'
 import { getFirestore } from 'redux-firestore';
 
 export function getAllUsers() {
-    return (dispatch, state, getFirestore)=>{
+    return (dispatch, state,{ getFirestore})=>{
         const db =getFirestore()
             db.collection ('users').onSnapshot(
             
