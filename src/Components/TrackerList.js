@@ -27,7 +27,7 @@ function TrackerList(props) {
 }
 function mapStateToProps(state) {
     return {
-        users:state.users
+        users:state.trackerState.users
     }
 }
 const mapDispatchToProps ={
